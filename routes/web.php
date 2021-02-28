@@ -36,7 +36,7 @@ Route::get('/contact', function () {
 Route::get('/post/create', function () {
     DB::table('post')->insert([
     'title'=>'IT Technologys.',
-    'body'=>'Information technology (IT) is the use of computers to store, retrieve, transmit, and manipulate data or information.  '
+    'body'=>' Information technology (IT) is the use of computers to store, retrieve, transmit, and manipulate data or information.  '
     ]);
  });
 
