@@ -7,6 +7,6 @@
     <title>Clients</title>
 </head>
 <body>
-    {{ $clients }}
+    {{ $abdu }}
 </body>
 </html>

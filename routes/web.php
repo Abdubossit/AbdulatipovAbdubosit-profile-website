@@ -3,7 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Models\Post;
+use App\Mail\MyMail;
 use App\Http\Controllers\NewController;
+use App\Http\Controllers\OldController;
+use App\Http\Controllers\MailController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -52,3 +56,14 @@ Route::get('/post/create', function () {
  Route::post('blog/create', [NewController:: class,'store'])->name('add-client');
 
  Route::get('/post/{id}', [NewController::class, 'get_client']);
+
+
+ Route::post('blog/creates', [OldController::class, 'store'])->name('add-post');
+ Route::get('blog/gmail', [OldController::class, 'index']);
+
+ Route::get('blog/creates', function(){
+    return view('form');
+});
+
+ 
+Route::get('mail',[MailController::class,'send']);
