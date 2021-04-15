@@ -67,3 +67,8 @@ Route::get('/post/create', function () {
 
  
 Route::get('mail',[MailController::class,'send']);
+
+Route::get('example/{lang}',function($lang){
+    App::setlocale($lang);
+    return view('home');
+});

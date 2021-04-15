@@ -10,7 +10,7 @@ class MailController extends Controller
 {
     public function send(){
         $obj = new \stdClass();
-        Mail::to("190103181@stu.sdu.edu.kz")->send(new MyMail($obj));
+        Mail::to("190103326@stu.sdu.edu.kz")->send(new MyMail($obj));
         return "Sended";
     }
 }
